@@ -1,6 +1,6 @@
 # Creator openwrt build dockerfile
 # ================================
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 MAINTAINER IMGTEC
 
 # add multiarch support
