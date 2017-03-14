@@ -6,10 +6,11 @@ MAINTAINER IMGTEC
 # Add multiarch support
 RUN dpkg --add-architecture i386
 
-# Openwrt dependencies
+# Openwrt/LEDE dependencies
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 binutils flex perl gawk grep file openssl bzip2 unzip zip rsync bc \
 build-essential bsdmainutils cmake device-tree-compiler \
+asciidoc fastjar gettext intltool ruby xsltproc \
 libncurses5-dev libncursesw5-dev libssl-dev zlib1g-dev libc6:i386 \
 ca-certificates wget curl subversion git mercurial \
 python python-nose python-lxml && \
