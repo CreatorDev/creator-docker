@@ -18,7 +18,7 @@ wget -O /usr/bin/repo https://storage.googleapis.com/git-repo-downloads/repo && 
 chmod a+x /usr/bin/repo
 
 # Constrained device dependencies
-RUN wget -O xc32.run http://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v1.34-full-install-linux-installer.run && \
+RUN wget -O xc32.run http://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v1.42-full-install-linux-installer.run && \
 chmod a+x xc32.run && \
 ./xc32.run --mode unattended --unattendedmodeui none --netservername localhost && \
 rm xc32.run
@@ -31,7 +31,7 @@ RUN wget -O /usr/bin/checkpatch.pl https://raw.githubusercontent.com/torvalds/li
 chmod +x /usr/bin/checkpatch.pl
 
 # Set all env in one go to avoid too many layers
-ENV PATH $PATH:/opt/microchip/xc32/v1.34/bin/
+ENV PATH $PATH:/opt/microchip/xc32/v1.42/bin/
 
 # Add and use build user
 RUN useradd -m -p build build
